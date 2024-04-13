@@ -71,3 +71,14 @@
     height: 180px;
     opacity: 1;
   }
+  .more {display: none;}
+.myBtn{
+  margin-left: 15px;
+}
+
+  /* .redMore{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } */
