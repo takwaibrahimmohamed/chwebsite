@@ -46,3 +46,12 @@ setLanguage(getLang)
 // window.addEventListener(("load"),()=>{
 //     setLanguage("chineese")
 // })
+
+if(localStorage.getItem("lang")=="english"){
+  
+    window.top.document.title ="Malaysoa travel made easy"
+  }
+  else{
+    window.top.document.title = "马来西亚旅行变得轻松"
+    console.log("hel")
+  }

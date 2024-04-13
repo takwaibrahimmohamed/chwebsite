@@ -348,16 +348,24 @@ options.forEach((option) => {
         if(option.children[0].alt=="flag-us"){
           console.log("1")
           localStorage.setItem("lang","chineese")
+          window.top.document.title="马来西亚旅行变得轻松"
         }
         else if(option.children[0].alt=="flag-us2"){
           console.log("2")
           localStorage.setItem("lang","english")
+          window.top.document.title="Malaysoa travel made easy"
         }
       }
       else{
         localStorage.setItem("lang",e.target.textContent)
+        console.log(window.top.document.title)
       }
-     
+     if(e.target.textContent == "english"){
+      window.top.document.title="Malaysoa travel made easy"
+     }
+     else{
+      window.top.document.title="马来西亚旅行变得轻松"
+     }
         console.log(e.target.textContent)
        
         const getLang=localStorage.getItem("lang")
@@ -417,3 +425,12 @@ btnText.forEach((btn)=>{
    
   })
 })
+if(localStorage.getItem("lang")=="english"){
+  
+  window.top.document.title ="Malaysoa travel made easy"
+}
+else{
+  window.top.document.title = "马来西亚旅行变得轻松"
+  console.log("hel")
+}
+console.log(window.top.document.title)
