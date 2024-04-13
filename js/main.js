@@ -265,11 +265,26 @@ select.addEventListener("click", (e) => {
 
 //select option
 options.forEach((option) => {
+
     option.addEventListener("click", (e) => {
-        console.log(e.target.textContent)
+      if(e.target.textContent ==""){
+        if(option.children[0].alt=="flag-us"){
+          console.log("1")
+          localStorage.setItem("lang","chineese")
+        }
+        else if(option.children[0].alt=="flag-us2"){
+          console.log("2")
+          localStorage.setItem("lang","english")
+        }
+      }
+      else{
         localStorage.setItem("lang",e.target.textContent)
-const getLang=localStorage.getItem("lang")
-console.log(getLang)
+      }
+     
+        console.log(e.target.textContent)
+       
+        const getLang=localStorage.getItem("lang")
+        console.log(getLang)
         setLanguage(getLang)
   
 });
